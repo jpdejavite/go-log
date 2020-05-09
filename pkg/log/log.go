@@ -67,6 +67,10 @@ func Warnf(format string, tag string, message string, metadata interface{}, coi 
 }
 
 func print(format string, level string, tag string, message string, metadata interface{}, coi string) {
-	meta, _ := json.Marshal(metadata)
+	meta := "{}"
+	if metadata != nil {
+		jsonByteArray, _ := json.Marshal(metadata)
+		meta = string(jsonByteArray)
+	}
 	log.Print(fmt.Sprintf(DefaultFormat, level, coi, tag, message, meta))
 }

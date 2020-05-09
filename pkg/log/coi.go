@@ -14,7 +14,7 @@ type CoiConfig struct {
 
 const (
 	defaultCharset = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
-	defaultLength  = 10
+	defaultLength  = 15
 )
 
 // GenerateCoi generate a new random coi (CoifConfig is not required)

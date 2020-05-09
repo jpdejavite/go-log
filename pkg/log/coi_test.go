@@ -9,7 +9,7 @@ import (
 
 func TestGenerateCoiDefaultConfig(t *testing.T) {
 	got := log.GenerateCoi(nil)
-	if got == "" || len(got) != 10 {
+	if got == "" || len(got) != 15 {
 		t.Errorf("GenerateCoi default config error: %s", got)
 	}
 }
